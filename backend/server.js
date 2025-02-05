@@ -11,7 +11,9 @@ app.use(cors());
 app.use(express.json());
 app.use("/images", express.static("public/images"));
 
-// Routes
+app.get("/", (req, res) => {
+  res.send("Testing Url");
+});
 app.use("/api/books", bookRoutes);
 
 // Connect to MongoDB
