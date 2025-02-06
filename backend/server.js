@@ -16,7 +16,6 @@ app.get("/", (req, res) => {
 });
 app.use("/api/books", bookRoutes);
 
-// Connect to MongoDB
 mongoose
   .connect(process.env.MONGO_URI, {
     useNewUrlParser: true,

@@ -1,0 +1,9 @@
+[build]
+  base = "/"
+  command = "npm install --prefix backend && npm run start --prefix backend"
+  publish = "public"  # If you have static files, set the publish folder here. Otherwise, leave it empty.
+
+[[redirects]]
+  from = "/api/*"
+  to = "http://localhost:5000/api/:splat"  # Use your backend URL (if hosted externally) for API requests
+  status = 200

@@ -1,7 +1,6 @@
 const multer = require("multer");
 const path = require("path");
 
-// Configure storage
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, "public/images");
@@ -11,7 +10,6 @@ const storage = multer.diskStorage({
   },
 });
 
-// Filter to accept only images
 const fileFilter = (req, file, cb) => {
   if (file.mimetype.startsWith("image/")) {
     cb(null, true);
